@@ -39,7 +39,7 @@ export default async function handler(req, res) {
 
     try {
         await resend.emails.send({
-            from: 'CaTecnoFan Diagnóstico <diagnostico@catecnofan.com>',
+            from: 'CaTecnoFan Diagnóstico <onboarding@resend.dev>',
             to: 'franciscoponzone93@gmail.com',
             replyTo: email,
             subject: `🔧 Diagnóstico: ${problema || 'Nuevo caso'} — ${nombre}`,
