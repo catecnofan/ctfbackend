@@ -35,25 +35,27 @@ export default async function handler(req, res) {
         }
 
         const html = `
+            <div style="background:#ffffff; color:#111111;">
             <h2 style="color:#00e5ff;">🔧 Nuevo Diagnóstico — CaTecnoFan</h2>
             <table style="border-collapse:collapse; width:100%; font-family:sans-serif; font-size:14px;">
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888; width:35%"><b>Problema</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(problema) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>Nombre</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(nombre)}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>Email</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(email)}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>CPU</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(cpu) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>GPU</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(gpu) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>RAM</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(ram) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>Windows</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(windows) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>Emulador</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(emulador) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>Driver GPU</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(driver) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>Juego</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(juego) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>Archivos del tutorial</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(tutorial) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>Vulkan SDK</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(vulkan) || '—'}</td></tr>
-                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#888;"><b>Antivirus bloqueó algo</b></td><td style="padding:8px; border:1px solid #333;">${escapeHtml(antivirus) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff; width:35%"><b>Problema</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(problema) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>Nombre</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(nombre)}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>Email</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(email)}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>CPU</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(cpu) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>GPU</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(gpu) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>RAM</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(ram) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>Windows</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(windows) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>Emulador</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(emulador) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>Driver GPU</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(driver) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>Juego</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(juego) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>Archivos del tutorial</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(tutorial) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>Vulkan SDK</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(vulkan) || '—'}</td></tr>
+                <tr><td style="padding:8px; border:1px solid #333; background:#111; color:#ffffff;"><b>Antivirus bloqueó algo</b></td><td style="padding:8px; border:1px solid #333; background:#ffffff; color:#111111;">${escapeHtml(antivirus) || '—'}</td></tr>
             </table>
-            <h3 style="color:#ffff00; margin-top:20px;">Descripción del problema</h3>
-            <p style="font-family:sans-serif; background:#111; padding:15px; border-left:4px solid #ffff00;">${escapeHtml(descripcion).replace(/\n/g, '<br>')}</p>
-            ${logs ? `<h3 style="color:#ff00ff; margin-top:20px;">Logs</h3><pre style="font-family:monospace; background:#111; padding:15px; overflow:auto; font-size:12px; border-left:4px solid #ff00ff;">${escapeHtml(logs)}</pre>` : ''}
+            <h3 style="color:#c9a300; margin-top:20px;">Descripción del problema</h3>
+            <p style="font-family:sans-serif; background:#f5f5f5; color:#111111; padding:15px; border-left:4px solid #c9a300;">${escapeHtml(descripcion).replace(/\n/g, '<br>')}</p>
+            ${logs ? `<h3 style="color:#c800c8; margin-top:20px;">Logs</h3><pre style="font-family:monospace; background:#f5f5f5; color:#111111; padding:15px; overflow:auto; font-size:12px; border-left:4px solid #c800c8;">${escapeHtml(logs)}</pre>` : ''}
+            </div>
         `;
 
         const response = await fetch('https://api.resend.com/emails', {
