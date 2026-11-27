@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mismoMonto, montoValido, pagoAcreditado, pagoDevuelto, textoMonto } from "../lib/pago.js";
+import { mismoMonto, montoValido, pagoAcreditado, pagoDevuelto, paypalCobrado, textoMonto } from "../lib/pago.js";
 
 test("acredita aprobado y procesado", () => {
     assert.equal(pagoAcreditado("APPROVED"), true);
@@ -13,6 +13,18 @@ test("acredita aprobado y procesado", () => {
 test("una devolución no queda paga", () => {
     assert.equal(pagoDevuelto("REFUNDED"), true);
     assert.equal(pagoAcreditado("REFUNDED"), false);
+});
+
+test("PayPal acredita solo cinco dólares de esa cuenta", () => {
+    const orden = {
+        status: "COMPLETED",
+        purchase_units: [{
+            custom_id: "usuario-1",
+            payments: { captures: [{ status: "COMPLETED", amount: { currency_code: "USD", value: "5.00" } }] }
+        }]
+    };
+    assert.equal(paypalCobrado(orden, "usuario-1"), true);
+    assert.equal(paypalCobrado(orden, "otro"), false);
 });
 
 test("el monto de cinco dólares entra en el rango de Ualá", () => {
